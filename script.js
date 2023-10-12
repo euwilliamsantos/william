@@ -4,7 +4,7 @@ const pipe = document.querySelector('.pipe')
 const start = document.querySelector('.start')
 const gameOver = document.querySelector('.game-over')
 
-audioStart = new Audio('./audio_theme.mp3')
+audioStart = new Audio('./audio-theme.mp3')
 audioGameOver = new Audio('./audio_gameover.mp3')
 
 
@@ -13,7 +13,8 @@ const startGame = () => {
   start.style.display = 'none'
 
   // audio
-  audioStart.play()
+    audioStart.play();
+    audioStart.loop = true;
 }
 
 const restartGame = () => {
