@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.game{
+.game {
     width: 100%;
     height: 100vh;
-    border-bottom: 30px solid green;
+    border-bottom: 10px solid green; /* Reduzi a borda para melhorar a aparência em telas menores */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -18,15 +18,16 @@ button {
     background: green;
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduzi o tamanho da fonte para telas menores */
     border: none;
-    padding: 1rem;
+    padding: 0.8rem; /* Reduzi o padding para telas menores */
     position: absolute;
-    right: 47vw;
-    top: 50vh;
+    right: 10%;
+    top: 80%; /* Ajustei a posição para telas menores */
     cursor: pointer;
     z-index: 1;
 }
+
 button:hover {
     border: 2px solid green;
     background: none;
@@ -45,28 +46,29 @@ button:hover {
     top: 0;
     left: 0;
 }
+
 .game-over h1 {
-    font-size: 3rem;
+    font-size: 2rem; /* Reduzi o tamanho da fonte para telas menores */
     color: red;
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 10rem; /* Ajustei a margem para telas menores */
 }
 
 .pipe {
     position: absolute;
     bottom: 0;
-    right: -80px;
-    width: 80px;
+    right: -40px; /* Reduzi o deslocamento para telas menores */
+    width: 40px; /* Reduzi a largura para telas menores */
 }
 
-.mario{
-    width: 150px;
+.mario {
+    width: 80px; /* Reduzi o tamanho para telas menores */
     position: absolute;
     bottom: 0;
 }
 
 .clouds {
-    width: 550px;
+    width: 300px; /* Reduzi a largura para telas menores */
     position: absolute;
     top: 0;
     animation: clouds-animation 20s infinite linear;
@@ -74,7 +76,7 @@ button:hover {
 
 @keyframes clouds-animation {
     from {
-        right: -550px;
+        right: -300px; /* Ajustei o valor para a nova largura */
     }
     to {
         right: 100%;
@@ -87,7 +89,7 @@ button:hover {
 
 @keyframes pipe-animation {
     from {
-        right: -80px;
+        right: -40px; /* Ajustei o valor para a nova largura */
     }
 
     to {
@@ -101,43 +103,22 @@ button:hover {
 
 @keyframes jump {
     0% {
-        bottom:0;
+        bottom: 0;
     }
 
     40% {
-        bottom: 200px;
+        bottom: 100px; /* Ajustei a altura do salto para telas menores */
     }
 
     50% {
-        bottom: 200px;
+        bottom: 100px;
     }
 
     60% {
-        bottom: 200px;
+        bottom: 100px;
     }
 
     100% {
         bottom: 0;
-    }
-}
-
-/* Media Queries para Dispositivos Móveis */
-@media only screen and (max-width: 600px) {
-    button {
-        right: 20%;
-        top: 70vh;
-    }
-    
-    .mario {
-        width: 100px;
-    }
-    
-    .clouds {
-        width: 350px;
-    }
-    
-    .pipe {
-        width: 60px;
-        right: -60px;
     }
 }
