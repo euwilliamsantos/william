@@ -120,3 +120,24 @@ button:hover {
         bottom: 0;
     }
 }
+
+/* Media Queries para Dispositivos Móveis */
+@media only screen and (max-width: 600px) {
+    button {
+        right: 20%;
+        top: 70vh;
+    }
+    
+    .mario {
+        width: 100px;
+    }
+    
+    .clouds {
+        width: 350px;
+    }
+    
+    .pipe {
+        width: 60px;
+        right: -60px;
+    }
+}
