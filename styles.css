@@ -1,20 +1,15 @@
+/* Reset de estilos e configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
+/* Estilos para o jogo */
 .game {
     width: 100%;
     height: 100vh;
-    border-bottom: 10px solid green; 
+    border-bottom: 10px solid green;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
@@ -24,6 +19,7 @@ body {
     justify-content: center;
 }
 
+/* Botão de ação */
 button {
     background: green;
     color: white;
@@ -33,7 +29,7 @@ button {
     padding: 0.8rem;
     cursor: pointer;
     z-index: 1;
-    margin-top: 1rem; /* Adicionei um espaço acima do botão */
+    margin-top: 1rem;
 }
 
 button:hover {
@@ -42,6 +38,7 @@ button:hover {
     color: green;
 }
 
+/* Tela de game over */
 .game-over {
     width: 100%;
     height: 100vh;
@@ -59,29 +56,32 @@ button:hover {
     font-size: 2rem;
     color: red;
     text-align: center;
-    margin-top: 1rem; /* Adicionei um espaço acima do texto */
+    margin-top: 1rem;
+}
+
+/* Elementos do jogo */
+.pipe,
+.mario,
+.clouds {
+    position: absolute;
+    bottom: 0;
 }
 
 .pipe {
-    position: absolute;
-    bottom: 0;
     right: -40px;
     width: 40px;
 }
 
 .mario {
     width: 80px;
-    position: absolute;
-    bottom: 0;
 }
 
 .clouds {
     width: 300px;
-    position: absolute;
-    top: 0;
     animation: clouds-animation 20s infinite linear;
 }
 
+/* Animações */
 @keyframes clouds-animation {
     from {
         right: -300px;
@@ -99,7 +99,6 @@ button:hover {
     from {
         right: -40px;
     }
-
     to {
         right: 100%;
     }
