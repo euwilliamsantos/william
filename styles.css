@@ -96,7 +96,7 @@ button:hover {
 }
 
 .jump {
-    animation: jump 900ms ease-out;
+    animation: jump 800ms ease-out;
 }
 
 @keyframes jump {
@@ -108,12 +108,12 @@ button:hover {
         bottom: 200px;
     }
 
-    40% {
-        bottom: 100px;
+    50% {
+        bottom: 200px;
     }
 
-    40% {
-        bottom: 100px;
+    60% {
+        bottom: 200px;
     }
 
     100% {
