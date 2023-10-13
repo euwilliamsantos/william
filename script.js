@@ -1,8 +1,3 @@
-let score = 0;
-const scoreElement = document.createElement('div');
-scoreElement.classList.add('score');
-document.body.appendChild(scoreElement);
-
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 
@@ -54,17 +49,6 @@ const loop = () => {
     const marioPosition = window
       .getComputedStyle(mario)
       .bottom.replace('px', ' ')
-
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
-      // Restante do código permanece igual.
-
-      // Adicione o seguinte código para incrementar a pontuação
-      score++;
-      scoreElement.textContent = `Score: ${score}`;
-    }
-  }, 10)
-}
-
 
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
       pipe.classList.remove('.pipe-animation')
