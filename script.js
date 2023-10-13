@@ -1,8 +1,8 @@
-const mario = document.querySelector('.mario')
-const pipe = document.querySelector('.pipe')
-
-const start = document.querySelector('.start')
-const gameOver = document.querySelector('.game-over')
+const mario = document.querySelector('.mario');
+const pipe = document.querySelector('.pipe');
+const start = document.querySelector('.start');
+const gameOver = document.querySelector('.game-over');
+const score = document.querySelector(".score");
 
 audioStart = new Audio('./audio-theme.mp3')
 audioGameOver = new Audio('./audio_gameover.mp3')
