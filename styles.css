@@ -132,6 +132,8 @@ button:hover {
 .score {
   font-weight: bold;
   text-transform: uppercase;
-  color: yellow; 
+  color: yellow; /* ou a cor de sua escolha */
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-
